@@ -14,7 +14,7 @@ export default class App extends React.Component {
 
             <Route path="/" exact component={Home} />
             <Route path="/second" component={Second} />
-            <Route path="/resend" component={Resend} />
+            <Route path="/resendCode" component={Resend} />
 
 
           </Switch>

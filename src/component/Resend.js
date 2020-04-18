@@ -5,6 +5,16 @@ export default class Resend extends Component {
     return(
       <div>
         <h2>Resend Code</h2>
+
+          <p>Email <input type="radio"/></p>
+          <p>Phone <input type="radio"/></p>
+
+          <button onClick={()=>
+            this.props.history.replace({
+              pathname:"/second"
+            })
+          } >Next</button>
+
       </div>
 
     )
