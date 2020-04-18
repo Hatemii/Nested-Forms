@@ -5,6 +5,7 @@ export default class App extends React.Component {
     firstexample: true,
     secondexample: false,
     thirdexample:false,
+    resendcode:false,
   }
 
   render(){
@@ -19,6 +20,8 @@ export default class App extends React.Component {
     const secondExample = (
       <div>
         <h2>Second Page</h2>
+        <input type="text" placeholder="Enter Code" />
+        <p>Resend Code <button onClick={()=> this.setState({secondexample: false, resendcode: true})}>click here</button></p>
         <button onClick={()=> this.setState({secondexample: false, thirdexample: true})}>Next</button>
       </div>
     )
@@ -29,12 +32,23 @@ export default class App extends React.Component {
       </div>
     )
 
+    const resendCode = (
+      <div>
+        <h2>Resend Code</h2>
+          <p>Email <input type="radio" /></p>
+          <p>Phone <input type="radio" /></p>
+
+        <button onClick={()=> this.setState({secondexample: true, resendcode: false})}>Next</button>
+      </div>
+    )
+
 
     return(
       <div>
         {this.state.firstexample ? firstExample : null}
         {this.state.secondexample ? secondExample : null}
         {this.state.thirdexample ? thirdExample : null}
+        {this.state.resendcode ? resendCode : null}
       </div>
     )
   }
