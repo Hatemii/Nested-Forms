@@ -1,6 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Route , Switch, Link } from "react-router-dom"
+
 import Home from "./component/Home"
+import Second from "./component/Second"
+import Resend from "./component/Resend"
 
 export default class App extends React.Component {
   render(){
@@ -9,7 +12,10 @@ export default class App extends React.Component {
         <BrowserRouter>
           <Switch>
 
-            <Route path="/" component={Home} />
+            <Route path="/" exact component={Home} />
+            <Route path="/second" component={Second} />
+            <Route path="/resend" component={Resend} />
+
 
           </Switch>
         </BrowserRouter>
