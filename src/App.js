@@ -8,12 +8,34 @@ export default class App extends React.Component {
     resendcode:false,
   }
 
-  render(){
+  handleAllClicks = () => {
+    if(this.state.firstexample){
+      this.setState({
+        firstexample: false,
+        secondexample: true
+      })
+    } else if (this.state.secondexample) {
+      this.setState({
+        secondexample: false,
+        thirdexample: true
+      })
+    } else if (this.state.resendcode) {
+      this.setState({
+        secondexample: true,
+        resendcode: false
+      })
+    }
+  }
 
+
+  render(){
     const firstExample = (
       <div>
         <h2>First Page</h2>
-        <button onClick={()=> this.setState({firstexample: false, secondexample: true})}>Next</button>
+        <h4>How do you want to recieve your code ?</h4>
+          <p>Email <input type="radio" /></p>
+          <p>Phone <input type="radio" /></p>
+        <button onClick={this.handleAllClicks}>Next</button>
       </div>
     )
 
@@ -21,8 +43,8 @@ export default class App extends React.Component {
       <div>
         <h2>Second Page</h2>
         <input type="text" placeholder="Enter Code" />
-        <p>Resend Code <button onClick={()=> this.setState({secondexample: false, resendcode: true})}>click here</button></p>
-        <button onClick={()=> this.setState({secondexample: false, thirdexample: true})}>Next</button>
+        <p>Didn't recieve a code? <button onClick={()=> this.setState({secondexample: false, resendcode: true})}>click here</button></p>
+        <button onClick={this.handleAllClicks}>Next</button>
       </div>
     )
 
@@ -38,7 +60,7 @@ export default class App extends React.Component {
           <p>Email <input type="radio" /></p>
           <p>Phone <input type="radio" /></p>
 
-        <button onClick={()=> this.setState({secondexample: true, resendcode: false})}>Next</button>
+        <button onClick={this.handleAllClicks}>Next</button>
       </div>
     )
 
