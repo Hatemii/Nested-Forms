@@ -18,7 +18,11 @@ export default class Second extends Component {
         <p>this is develop branch that i am working now</p>
 >>>>>>> develop
 
-        <h2>Second Page</h2>
+        <p>this  am working now</p>
+        <p>this  am working now</p>
+
+
+    <h2>Second Page</h2>
         <h4>Enter your code</h4>
 
 
