@@ -7,9 +7,13 @@ export default class Second extends Component {
       <div>
         <h2>DEVELOP BRANCH</h2>
         <p>this is develop branch that i am working now</p>
+        <p>this is develop branch that i am working now</p>
+        <p>this is develop branch that i am working now</p>
+        <p>this is develop branch that i am working now</p>
 
         <h2>Second Page</h2>
         <h4>Enter your code</h4>
+
 
 
           <input type="text" placeholder="enter code . . ."  />
