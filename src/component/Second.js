@@ -5,10 +5,12 @@ export default class Second extends Component {
   render(){
     return(
       <div>
+        <h2>DEVELOP BRANCH</h2>
+
+
         <h2>Second Page</h2>
         <h4>Enter your code</h4>
 
-      <h2>HAHAHAHAHAHAH</h2>
 
           <input type="text" placeholder="enter code . . ."  />
 
