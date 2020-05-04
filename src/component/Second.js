@@ -5,6 +5,9 @@ export default class Second extends Component {
   render(){
     return(
       <div>
+
+        <h2>MASTER BRANCH</h2>
+
         <h2>Second Page</h2>
         <h4>Enter your code</h4>
 
